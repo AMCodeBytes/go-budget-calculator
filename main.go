@@ -21,7 +21,8 @@ func main() {
 			fmt.Println("-----   Potential Earnings   -----")
 			potentialEarnings()
 		case 2:
-			// code
+			fmt.Println("-----   Potential Earnings Per Year   -----")
+			perYear()
 		case 3:
 			// code
 		case 4:
@@ -60,5 +61,17 @@ func potentialEarnings() {
 
 	result = float64(hours) * pay
 
-	fmt.Printf("\n\n----- Result -----\nFor %v hours at %v pay you'll make %v\n\n", hours, pay, result)
+	fmt.Printf("\n\n----- Result -----\nFor %v hours at £%v pay you'll make £%v\n\n", hours, pay, result)
+}
+
+func perYear() {
+	var pay float64
+	var result float64
+
+	fmt.Print("How much pay: ")
+	fmt.Scan(&pay)
+
+	result = pay * float64(8) * (float64(260))
+
+	fmt.Printf("\n\n----- Result -----\nFor a year at £%v pay you'll make £%v\n\n", pay, result)
 }
