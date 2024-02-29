@@ -19,18 +19,19 @@ func main() {
 		switch choice {
 		case 1:
 			fmt.Println("-----   Potential Earnings   -----")
-			potentialEarnings()
+			perHour()
 		case 2:
 			fmt.Println("-----   Potential Earnings Per Year   -----")
 			perYear()
 		case 3:
-			fmt.Println("-----   Potential Earnings Per Year   -----")
+			fmt.Println("-----   Potential Earnings Per Month   -----")
 			perMonth()
 		case 4:
-			fmt.Println("-----   Potential Earnings Per Year   -----")
+			fmt.Println("-----   Potential Earnings Per Week   -----")
 			perWeek()
 		case 5:
-			// code
+			fmt.Println("-----   Potential Earnings Per Day   -----")
+			perDay()
 		case 6:
 			os.Exit(0)
 		default:
@@ -50,7 +51,7 @@ func displayMenu() {
 	fmt.Println("6. Quit")
 }
 
-func potentialEarnings() {
+func perHour() {
 	var hours int
 	var pay float64
 	var result float64
@@ -100,4 +101,16 @@ func perWeek() {
 	result = pay * float64(8) * (float64(5))
 
 	fmt.Printf("\n\n----- Result -----\nFor a week at £%v pay you'll make £%v\n\n", pay, result)
+}
+
+func perDay() {
+	var pay float64
+	var result float64
+
+	fmt.Print("How much pay: ")
+	fmt.Scan(&pay)
+
+	result = pay * float64(8)
+
+	fmt.Printf("\n\n----- Result -----\nFor a day at £%v pay you'll make £%v\n\n", pay, result)
 }
