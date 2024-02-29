@@ -18,7 +18,8 @@ func main() {
 
 		switch choice {
 		case 1:
-			// code
+			fmt.Println("-----   Potential Earnings   -----")
+			potentialEarnings()
 		case 2:
 			// code
 		case 3:
@@ -32,6 +33,8 @@ func main() {
 		default:
 			panic("Invalid input entered.")
 		}
+
+		choice = 0
 	}
 }
 
@@ -42,4 +45,20 @@ func displayMenu() {
 	fmt.Println("4. Calculate how much a week (approx) you can make from y pay")
 	fmt.Println("5. Calculate how much a day (approx) you can make from y pay")
 	fmt.Println("6. Quit")
+}
+
+func potentialEarnings() {
+	var hours int
+	var pay float64
+	var result float64
+
+	fmt.Print("How many hours: ")
+	fmt.Scan(&hours)
+
+	fmt.Print("How much pay: ")
+	fmt.Scan(&pay)
+
+	result = float64(hours) * pay
+
+	fmt.Printf("\n\n----- Result -----\nFor %v hours at %v pay you'll make %v\n\n", hours, pay, result)
 }
