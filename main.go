@@ -27,7 +27,8 @@ func main() {
 			fmt.Println("-----   Potential Earnings Per Year   -----")
 			perMonth()
 		case 4:
-			// code
+			fmt.Println("-----   Potential Earnings Per Year   -----")
+			perWeek()
 		case 5:
 			// code
 		case 6:
@@ -87,4 +88,16 @@ func perMonth() {
 	result = pay * float64(8) * (float64(21))
 
 	fmt.Printf("\n\n----- Result -----\nFor a month at £%v pay you'll make £%v\n\n", pay, result)
+}
+
+func perWeek() {
+	var pay float64
+	var result float64
+
+	fmt.Print("How much pay: ")
+	fmt.Scan(&pay)
+
+	result = pay * float64(8) * (float64(5))
+
+	fmt.Printf("\n\n----- Result -----\nFor a week at £%v pay you'll make £%v\n\n", pay, result)
 }
